@@ -16,6 +16,7 @@ public class Client {
 		mayBatch.setId(11);
 		mayBatch.setName("May-Batch");
 		mayBatch.setBatch("May");
+		mayBatch.setIq(12);
 		
 		sr.register(EnumBatchSet.MAY_BATCH.getLabel(), mayBatch);
 		
