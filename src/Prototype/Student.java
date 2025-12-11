@@ -25,12 +25,19 @@ public class Student implements Prototype<Student> {
 		this.batch = batch;
 	}
 	
+	public Student() {
+		
+	}
+	
+	public Student(Student other) {
+		this.id = other.id;
+		this.name = other.name;
+		this.batch = other.batch;
+	}
+	
 	@Override
 	public Student getClone() {
-		Student copy = new Student();
-		copy.id = this.id;
-		copy.name = this.name;
-		return copy;
+		return new Student(this);
 	}
 	
 }

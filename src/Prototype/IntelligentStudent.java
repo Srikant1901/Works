@@ -12,13 +12,17 @@ public class IntelligentStudent extends Student{
 		this.iq = iq;
 	}
 	
+	public IntelligentStudent() {
+		
+	}
+	
+	public IntelligentStudent (IntelligentStudent other) {
+		super(other);
+		this.iq= other.iq;
+	}
 	@Override
 	public IntelligentStudent getClone() {
-		IntelligentStudent iS = new IntelligentStudent();
-		iS.id = this.id;
-		iS.name = this.name;
-		iS.iq = this.iq;
-		return iS;
+		return new IntelligentStudent(this);
 	}
 	
 }
